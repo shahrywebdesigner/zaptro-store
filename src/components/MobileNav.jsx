@@ -1,0 +1,44 @@
+import { UserButton, useUser } from "@clerk/react";
+import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
+const MobileNav = ({ openNav, setOpenNav }) => {
+  const { user } = useUser();
+  return (
+    <div
+      className={`${openNav ? "left-0" : "-left-full"} fixed z-20 bottom-0 top-0 transition-all rounded-r-2xl shadow-md bg-white text-black flex flex-col justify-between h-screen w-[75%] p-8 pt-16 pb-6 md:hidden`}
+    >
+      <div>
+        {
+          <div>
+            <div className="flex items-center justify-start gap-3">
+              {user? <UserButton size={50} /> : <FaUserCircle size={50} />}
+              <div className="flex flex-col gap-3 ">
+                <h1> Hello, {user?.firstName}</h1>
+                <p className="text-sm text-slate-500">Premium User</p>
+              </div>
+            </div>
+            <nav className="mt-12">
+              <ul className=" flex flex-col gap-7 font-semibold text-2xl">
+                <Link className= 'cursor-pointer' onClick={()=>setOpenNav(false)} to={"/"}>
+                  <li>Home</li>
+                </Link>
+                <Link className= 'cursor-pointer' onClick={()=>setOpenNav(false)} to={"/products"}>
+                  <li>Products</li>
+                </Link>
+                <Link className= 'cursor-pointer' onClick={()=>setOpenNav(false)} to={"/about"}>
+                  <li>About</li>
+                </Link>
+                <Link className= 'cursor-pointer' onClick={()=>setOpenNav(false)} to={"/contact"}>
+                  <li>Contact</li>
+                </Link>
+              </ul>
+            </nav>
+          </div>
+        }
+      </div>
+    </div>
+  );
+};
+
+export default MobileNav;
