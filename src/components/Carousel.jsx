@@ -93,9 +93,9 @@ const navigate = useNavigate();
               key={index}
               className="bg-linear-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] -z-10"
             >
-              <div className="flex flex-col md:my-20 md:flex-row my-8 items-center justify-center gap-10 md:gap-20 px-4 md:mx-10 min-h-screen md:h-150 ">
+              <div className="flex flex-col md:my-20 md:flex-row mt-4 mb-6 items-center justify-center gap-10 md:gap-20 px-4 md:mx-10 min-h-screen md:h-150 ">
                 <div className="">
-                  <div className="space-y-3 md:space-y-6">
+                  <div className="space-y-3 pb-3 md:pb-0 md:space-y-6">
                     <h3 className="text-red-500 font-semibold font-sans text-sm">
                       Powering your world with the best in Electronices
                     </h3>

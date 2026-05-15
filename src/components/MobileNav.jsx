@@ -11,7 +11,7 @@ const MobileNav = ({ openNav, setOpenNav }) => {
       <div>
         {
           <div>
-            <div className="flex flex-col items-center justify-start gap-3">
+            <div className="flex flex-col gap-3">
               {user? <UserButton size={50} /> : <FaUserCircle size={50} />}
               <div className="flex flex-col gap-3 ">
                 <h1> Hello, {user?.firstName}</h1>
