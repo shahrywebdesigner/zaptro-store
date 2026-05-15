@@ -1,6 +1,6 @@
-import { UserButton, useUser } from "@clerk/react";
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { Show, SignInButton, SignUpButton,UserButton, useUser} from '@clerk/react'
 
 const MobileNav = ({ openNav, setOpenNav }) => {
   const { user } = useUser();
@@ -11,12 +11,20 @@ const MobileNav = ({ openNav, setOpenNav }) => {
       <div>
         {
           <div>
-            <div className="flex items-center justify-start gap-3">
+            <div className="flex flex-col items-center justify-start gap-3">
               {user? <UserButton size={50} /> : <FaUserCircle size={50} />}
               <div className="flex flex-col gap-3 ">
                 <h1> Hello, {user?.firstName}</h1>
                 <p className="text-sm text-slate-500">Premium User</p>
               </div>
+              <div className=" flex flex-col gap-1 not-[]:md:hidden">
+                          <Show when="signed-out" className='flex gap-1'>
+                            <SignInButton className=" w-full bg-red-600 rounded text-white text-lg px-2 py-1 cursor-pointer " />
+                          </Show>
+                          <Show when ="signed-out">
+                            <SignUpButton className=" hover:bg-red-700 bg-red-600 w-full rounded text-white text-lg px-3 py-1 cursor-pointer " />
+                            </Show>
+                        </div>
             </div>
             <nav className="mt-12">
               <ul className=" flex flex-col gap-7 font-semibold text-2xl">
