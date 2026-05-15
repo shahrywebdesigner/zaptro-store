@@ -46,7 +46,7 @@ const Footer = () => {
       </div>
 
       {/* CopyRight */}
-      <div className=" text-sm mt-3 md:mt-0 flex items-center justify-center border-t border-t-gray-700 text-white pt-6  border-gray-100">
+      <div className=" text-sm mt-5 md:mt-0 flex items-center justify-center border-t border-t-gray-700 text-white pt-6  border-gray-100">
         © 2026 <span className="text-red-500">Zaptro</span>. All rights reserved
       </div>
     </footer>
