@@ -1,6 +1,7 @@
 import { FaUserCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import { Show, SignInButton, SignUpButton,UserButton, useUser} from '@clerk/react'
+import { RxCross2 } from "react-icons/rx";
 
 const MobileNav = ({ openNav, setOpenNav }) => {
   const { user } = useUser();
@@ -11,7 +12,8 @@ const MobileNav = ({ openNav, setOpenNav }) => {
       <div>
         {
           <div>
-            <div className="flex flex-col gap-3">
+            <div className=" relative flex flex-col gap-3">
+                <div onClick ={()=> setOpenNav(false) } className=" absolute right-0 top-0 m-1"><RxCross2/> </div>
               {user? <UserButton size={50} /> : <FaUserCircle size={50} />}
               <div className="flex flex-col gap-3 ">
                 <h1> Hello, {user?.firstName}</h1>
