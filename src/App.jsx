@@ -62,8 +62,8 @@ useEffect(()=>{
           <Route path="/cart" element={<ProtectedRoute><Cart location={location} getLocation={getLocation} /></ProtectedRoute>}></Route>
           <Route path="/contact" element={<Contact />}></Route>
         </Routes>
+        <Footer/>
       </BrowserRouter>
-      <Footer/>
     </div>
   );
 };

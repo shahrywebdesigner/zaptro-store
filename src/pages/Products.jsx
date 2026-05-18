@@ -47,8 +47,8 @@ const Products = () => {
   const totalDynamicPage = Math.ceil(filterData?.length / 8);
 
   return (
-    <div>
-      <div className=" max-w-6xl mx-auto mb-10">
+    <div className="bg-gray-50/50 min-h-screen pb-12">
+      <div className="max-w-6xl mx-auto px-4 pt-6">
         <MobileFilter
           openFilter={openFilter}
           setOpenFilter={setOpenFilter}
@@ -80,8 +80,8 @@ const Products = () => {
                 handleCategoryChange={handleCategoryChange}
               />
               {filterData?.length > 0 ? (
-                <div className="flex flex-col justify-center items-center">
-                  <div className=" grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-7 mt-10">
+                <div className="flex flex-col justify-center items-center w-full">
+                  <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 md:gap-6 mt-8 w-full">
                     {filterData
                       ?.slice(page * 8 - 8, page * 8)
                       .map((product, index) => {
