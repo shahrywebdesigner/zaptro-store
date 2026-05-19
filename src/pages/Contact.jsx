@@ -14,9 +14,14 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-linear-to-r from-[#0f0c29] via-[#302b63] to-[#24243e] flex items-center justify-center px-4 py-10">
       <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-2xl shadow-2xl p-10 w-full max-w-5xl ">
-        <h1 className=" font-bold text-4xl text-center mb-10 text-white ">
+        <h1 className="font-black text-4xl text-center mb-10 text-white select-none">
           Get in Touch with{" "}
-          <span className=" text-red-500 font-bold text-4xl">Zaptro</span>{" "}
+          <span className="group inline-block transition-transform duration-200 hover:scale-[1.01]">
+            <span className="text-red-500 font-serif inline-block transition-transform duration-300 hover:rotate-[-4deg] hover:scale-110">
+              Z
+            </span>
+            aptro
+          </span>
         </h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           {/* Left Side: Contact Details */}

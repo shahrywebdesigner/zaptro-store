@@ -5,8 +5,14 @@ const About = () => {
     <div className="px-6 py-12 my-12 bg-white max-w-5xl mx-auto rounded-2xl border border-gray-100 shadow-xl">
       {/* Header Heading */}
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <h1 className="text-4xl font-extrabold text-gray-900 tracking-tight mb-4">
-          About <span className="text-red-500">Zaptro</span>
+        <h1 className="text-4xl font-black text-gray-900 tracking-tight mb-4 select-none">
+          About{" "}
+          <span className="group inline-block transition-transform duration-200 hover:scale-[1.01]">
+            <span className="text-red-500 font-serif inline-block transition-transform duration-300 hover:rotate-[-4deg] hover:scale-110">
+              Z
+            </span>
+            aptro
+          </span>
         </h1>
         <p className="text-gray-600 text-lg leading-relaxed">
           Welcome to Zaptro, your ultimate destination for premium quality products. We bridge the gap between innovation and everyday convenience to bring you a handpicked collection designed to elevate your lifestyle.
@@ -36,10 +42,17 @@ const About = () => {
         </div>
       </div>
 
-      {/* Feature Grid Section */}
+      {/* Centered Highlights Section Label */}
       <div className="mb-14">
-        <h2 className="text-2xl font-bold text-gray-900 text-center mb-8">
-          Why Choose Zaptro?
+        <h2 className="text-2xl font-black text-gray-900 text-center mb-8 select-none">
+          Why Choose{" "}
+          <span className="group inline-block transition-transform duration-200 hover:scale-[1.01]">
+            <span className="text-red-500 font-serif inline-block transition-transform duration-300 hover:rotate-[-4deg] hover:scale-110">
+              Z
+            </span>
+            aptro
+          </span>
+          ?
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {[
@@ -62,7 +75,16 @@ const About = () => {
       {/* Bottom CTA Element */}
       <div className="bg-gray-950 text-white rounded-2xl p-8 md:p-10 text-center relative overflow-hidden">
         <div className="relative z-10 max-w-xl mx-auto">
-          <h2 className="text-2xl md:text-3xl font-bold mb-3">Join the Zaptro Family</h2>
+          <h2 className="text-2xl md:text-3xl font-black mb-3 select-none">
+            Join the{" "}
+            <span className="group inline-block transition-transform duration-200 hover:scale-[1.02]">
+              <span className="text-red-500 font-serif inline-block transition-transform duration-300 hover:rotate-[-4deg] hover:scale-110">
+                Z
+              </span>
+              aptro
+            </span>{" "}
+            Family
+          </h2>
           <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed">
             Experience shopping tailored completely around your expectations. Explore our catalog today to unlock exclusive seasonal pricing discounts.
           </p>
