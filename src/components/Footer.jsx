@@ -12,9 +12,12 @@ const Footer = () => {
         
         {/* Col 1: Brand details context */}
         <div className="space-y-4">
-          <Link to="/" className="inline-block">
-            <h2 className="text-red-500 text-3xl font-extrabold tracking-tight font-serif">
-              Z<span className="font-sans font-bold text-white text-2xl">aptro</span>
+          <Link to="/" className="group inline-block">
+            <h2 className="text-3xl font-black tracking-tight text-white select-none transition-transform duration-200 group-hover:scale-[1.01]">
+              <span className="text-red-500 font-serif inline-block transition-transform duration-300 group-hover:rotate-[-4deg] group-hover:scale-110">
+                Z
+              </span>
+              aptro
             </h2>
           </Link>
           <p className="text-gray-400 text-sm leading-relaxed">
